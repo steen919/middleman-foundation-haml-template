@@ -31,3 +31,9 @@ bundle exec middleman server
 ```
 
 Stop server with ctrl-c
+
+When you are ready to deploy you can build your project (the result is in a new folder called 'build'):
+
+```bash
+bundle exec middleman build
+```
