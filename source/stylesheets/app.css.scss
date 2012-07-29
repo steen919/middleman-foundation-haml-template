@@ -1,0 +1,51 @@
+@import "foundation/base";
+
+/* --------------------------------------------------
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+/*-----ORBIT FIX---------*/
+div.orbit-wrapper span.rotator { background: url('../images/foundation/orbit/rotator-black.png') no-repeat; }
+div.orbit-wrapper span.mask.move { background: url('../images/foundation/orbit/timer-black.png') repeat 0 0; }
+div.orbit-wrapper span.pause { background: url('../images/foundation/orbit/pause-black.png') no-repeat; }
+div.orbit-wrapper span.pause.active { background: url('../images/foundation/orbit/pause-black.png') no-repeat 0 -40px; }
+div.orbit-wrapper div.slider-nav span.right { background: url('../images/foundation/orbit/right-arrow-small.png'); }
+div.orbit-wrapper div.slider-nav span.left { background: url('../images/foundation/orbit/left-arrow-small.png');  }
+.lt-ie9 div.orbit-wrapper div.slider-nav span.right { background: url('../images/foundation/orbit/right-arrow-small.png'); }
+.lt-ie9 div.orbit-wrapper div.slider-nav span.left { background: url('../images/foundation/orbit/left-arrow-small.png'); }
+ul.orbit-bullets li { background: url('../images/foundation/orbit/bullets.jpg') no-repeat 4px 0; }
+#featured { 
+  background: url('../images/index/spinner.gif') center center #f4f4f4; 
+  background-repeat:no-repeat;
+  height: 300px; 
+  img { 
+    display: none; 
+  }
+  &.orbit { 
+    background: none; 
+    img { 
+      display: block; 
+    }
+  }
+}
+
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+

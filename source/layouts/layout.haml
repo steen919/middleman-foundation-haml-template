@@ -1,0 +1,67 @@
+!!! 5
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+%html.no-js{ :lang => "en" }
+  <!--<![endif]-->
+  %head
+    %meta{ :charset => "utf-8" }/
+    
+    -# Always force latest IE rendering engine (even in intranet) & Chrome Frame
+    -# Remove this if you use the .htaccess
+    %meta{ "http-equiv" => "X-UA-Compatible", :content => "IE=edge,chrome=1" }/
+    %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }/
+    
+    %title 
+      Titel
+
+    %link{ :href => "stylesheets/foundation-style/globals.css", :media => "all", :rel => "stylesheet" }/
+    %link{ :href => "stylesheets/foundation-style/typography.css", :media => "all", :rel => "stylesheet" }/
+    %link{ :href => "stylesheets/foundation-style/grid.css", :media => "all", :rel => "stylesheet" }/
+    %link{ :href => "stylesheets/foundation-style/ui.css", :media => "all", :rel => "stylesheet" }/
+    %link{ :href => "stylesheets/foundation-style/buttons.css", :media => "all", :rel => "stylesheet" }/
+    %link{ :href => "stylesheets/foundation-style/tabs.css", :media => "all", :rel => "stylesheet" }/
+    %link{ :href => "stylesheets/foundation-style/navbar.css", :media => "all", :rel => "stylesheet" }/
+    %link{ :href => "stylesheets/foundation-style/forms.css", :media => "all", :rel => "stylesheet" }/
+    %link{ :href => "stylesheets/foundation-style/orbit.css", :media => "all", :rel => "stylesheet" }/
+    %link{ :href => "stylesheets/foundation-style/reveal.css", :media => "all", :rel => "stylesheet" }/
+    %link{ :href => "stylesheets/app.css", :media => "all", :rel => "stylesheet" }/
+    %script{ :src => "javascripts/foundation/modernizr.foundation.js" }
+      
+    /  IE Fix for HTML5 Tags
+    <!--[if lt IE 9]>
+    %script{ :src => "http://html5shiv.googlecode.com/svn/trunk/html5.js" }
+    <![endif]-->
+    
+  %body 
+       
+    = yield
+  
+    / Included JS Files (Uncompressed)
+    /  
+      <script src="jquery.js"></script>
+      <script src="javascripts/foundation/modernizr.foundation.js"></script>
+      <script src="javascripts/foundation/jquery.placeholder.js"></script>
+      <script src="javascripts/foundation/jquery.foundation.alerts.js"></script>
+      <script src="javascripts/foundation/jquery.foundation.accordion.js"></script>
+      <script src="javascripts/foundation/jquery.foundation.buttons.js"></script>
+      <script src="javascripts/foundation/jquery.foundation.tooltips.js"></script>
+      <script src="javascripts/foundation/jquery.foundation.forms.js"></script>
+      <script src="javascripts/foundation/jquery.foundation.tabs.js"></script>
+      <script src="javascripts/foundation/jquery.foundation.navigation.js"></script>
+      <script src="javascripts/foundation/jquery.foundation.reveal.js"></script>
+      <script src="javascripts/foundation/jquery.foundation.orbit.js"></script>
+    
+    / Included JS Files (Compressed) 
+    %script{ :src => "javascripts/jquery.min.js" }
+    %script{ :src => "javascripts/foundation.min.js" }
+    
+    / Application Javascript, safe to override
+    %script{ :src => "javascripts/app.js" }
+
+    :javascript
+      $(window).load(function() {
+        $('#featured').orbit();
+      });
